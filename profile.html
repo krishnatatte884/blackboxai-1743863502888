@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Profile | CollabHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">CollabHub</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-blue-400">Home</a>
+                <a href="#" class="text-blue-400">Create Profile</a>
+                <a href="search.html" class="hover:text-blue-400">Find Teammates</a>
+            </div>
+            <button class="md:hidden">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Profile Form -->
+    <section class="py-12">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h1 class="text-3xl font-bold text-center mb-8">Create Your Profile</h1>
+            <form id="profileForm" class="bg-white rounded-lg shadow-md p-6 md:p-8">
+                <div class="flex flex-col items-center mb-8">
+                    <div class="relative mb-4">
+                        <img id="profilePreview" src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg" 
+                             class="profile-pic rounded-full border-4 border-gray-200">
+                        <label for="profileImage" class="absolute bottom-0 right-0 bg-blue-600 text-white p-2 rounded-full cursor-pointer hover:bg-blue-700">
+                            <i class="fas fa-camera"></i>
+                            <input type="file" id="profileImage" accept="image/*" class="hidden">
+                        </label>
+                    </div>
+                    <p class="text-gray-600">Click the camera icon to upload a profile picture</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 font-medium mb-2">Full Name*</label>
+                        <input type="text" id="name" required
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 font-medium mb-2">Email*</label>
+                        <input type="email" id="email" required
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label for="bio" class="block text-gray-700 font-medium mb-2">Bio*</label>
+                    <textarea id="bio" rows="4" required
+                              class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                              placeholder="Tell others about yourself, your experience, and what you're looking for..."></textarea>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-medium mb-2">Domains of Interest*</label>
+                    <div class="flex flex-wrap gap-3">
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" name="domains" value="tech" class="rounded text-blue-600">
+                            <span class="ml-2">Tech</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" name="domains" value="design" class="rounded text-blue-600">
+                            <span class="ml-2">Design</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" name="domains" value="business" class="rounded text-blue-600">
+                            <span class="ml-2">Business</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" name="domains" value="marketing" class="rounded text-blue-600">
+                            <span class="ml-2">Marketing</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <label for="skills" class="block text-gray-700 font-medium mb-2">Skills* (Add comma separated)</label>
+                    <input type="text" id="skills" required
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                           placeholder="JavaScript, UI Design, Market Research...">
+                    <p class="text-sm text-gray-500 mt-1">These will appear as tags on your profile</p>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg">
+                        Create Profile
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
