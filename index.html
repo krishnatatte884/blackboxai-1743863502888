@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollabHub | Find Your Perfect Team</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .skill-tag {
+            @apply px-2 py-1 rounded-full text-xs font-semibold;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">CollabHub</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="hover:text-blue-400">Home</a>
+                <a href="profile.html" class="hover:text-blue-400">Create Profile</a>
+                <a href="search.html" class="hover:text-blue-400">Find Teammates</a>
+            </div>
+            <button class="md:hidden">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Find Your Dream Team</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Connect with students who share your passion for tech, design, business and more.</p>
+            <div class="max-w-md mx-auto">
+                <div class="relative">
+                    <input type="text" placeholder="Search by skill or interest..." 
+                           class="w-full px-4 py-3 rounded-lg text-gray-800">
+                    <button class="absolute right-2 top-2 text-gray-500">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="flex flex-wrap justify-center mt-4 gap-2">
+                    <button class="bg-blue-600 hover:bg-blue-700 px-4 py-1 rounded-full text-sm">Tech</button>
+                    <button class="bg-purple-600 hover:bg-purple-700 px-4 py-1 rounded-full text-sm">Design</button>
+                    <button class="bg-green-600 hover:bg-green-700 px-4 py-1 rounded-full text-sm">Business</button>
+                    <button class="bg-yellow-600 hover:bg-yellow-700 px-4 py-1 rounded-full text-sm">Marketing</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Profiles -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Featured Profiles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Profile Card 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" 
+                             alt="Profile" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Alex Johnson</h3>
+                        <p class="text-gray-600 mb-4">Full Stack Developer | UI/UX Enthusiast</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="skill-tag bg-blue-100 text-blue-800">JavaScript</span>
+                            <span class="skill-tag bg-green-100 text-green-800">React</span>
+                            <span class="skill-tag bg-purple-100 text-purple-800">Node.js</span>
+                        </div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg">
+                            Connect
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Profile Card 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" 
+                             alt="Profile" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Sarah Williams</h3>
+                        <p class="text-gray-600 mb-4">Product Designer | UX Researcher</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="skill-tag bg-red-100 text-red-800">Figma</span>
+                            <span class="skill-tag bg-yellow-100 text-yellow-800">UI Design</span>
+                            <span class="skill-tag bg-indigo-100 text-indigo-800">Prototyping</span>
+                        </div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg">
+                            Connect
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Profile Card 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <img src="https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg" 
+                             alt="Profile" class="h-full w-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Michael Chen</h3>
+                        <p class="text-gray-600 mb-4">Business Analyst | Marketing Specialist</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="skill-tag bg-green-100 text-green-800">Market Research</span>
+                            <span class="skill-tag bg-purple-100 text-purple-800">Data Analysis</span>
+                            <span class="skill-tag bg-blue-100 text-blue-800">SEO</span>
+                        </div>
+                        <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg">
+                            Connect
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="search.html" class="inline-block bg-gray-900 hover:bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold">
+                    Browse All Profiles
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-2xl font-bold">CollabHub</h3>
+                    <p class="text-gray-400">Connecting students for better projects</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="hover:text-blue-400"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="#" class="hover:text-blue-400"><i class="fab fa-linkedin text-xl"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 CollabHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
