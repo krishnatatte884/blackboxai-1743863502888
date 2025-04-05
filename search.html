@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Teammates | CollabHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .skill-tag {
+            @apply px-2 py-1 rounded-full text-xs font-semibold;
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold">CollabHub</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-blue-400">Home</a>
+                <a href="profile.html" class="hover:text-blue-400">Create Profile</a>
+                <a href="#" class="text-blue-400">Find Teammates</a>
+            </div>
+            <button class="md:hidden">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Search Section -->
+    <section class="py-8 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="relative mb-4">
+                    <input type="text" id="searchInput" placeholder="Search by name, skill, or interest..." 
+                           class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500">
+                    <button class="absolute right-2 top-2 text-gray-500 hover:text-blue-600">
+                        <i class="fas fa-search text-xl"></i>
+                    </button>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <select id="domainFilter" class="px-4 py-2 border border-gray-300 rounded-lg">
+                        <option value="">All Domains</option>
+                        <option value="tech">Tech</option>
+                        <option value="design">Design</option>
+                        <option value="business">Business</option>
+                        <option value="marketing">Marketing</option>
+                    </select>
+                    <select id="sortBy" class="px-4 py-2 border border-gray-300 rounded-lg">
+                        <option value="recent">Most Recent</option>
+                        <option value="skills">Most Skills Match</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-6">Search Results</h2>
+            
+            <div id="resultsContainer" class="space-y-6">
+                <!-- Sample Profile Result 1 -->
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row gap-6">
+                    <div class="flex-shrink-0">
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" 
+                             alt="Profile" class="profile-pic rounded-full">
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-semibold">David Miller</h3>
+                        <p class="text-gray-600 mb-3">Full Stack Developer | Open Source Contributor</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="skill-tag bg-blue-100 text-blue-800">JavaScript</span>
+                            <span class="skill-tag bg-green-100 text-green-800">React</span>
+                            <span class="skill-tag bg-purple-100 text-purple-800">Node.js</span>
+                            <span class="skill-tag bg-yellow-100 text-yellow-800">MongoDB</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">Looking for teammates to build an educational platform for coding beginners.</p>
+                    </div>
+                    <div class="flex-shrink-0 flex items-center">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg">
+                            Connect
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sample Profile Result 2 -->
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row gap-6">
+                    <div class="flex-shrink-0">
+                        <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" 
+                             alt="Profile" class="profile-pic rounded-full">
+                    </div>
+                    <div class="flex-grow">
+                        <h3 class="text-xl font-semibold">Emma Wilson</h3>
+                        <p class="text-gray-600 mb-3">UI/UX Designer | Product Strategist</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="skill-tag bg-red-100 text-red-800">Figma</span>
+                            <span class="skill-tag bg-indigo-100 text-indigo-800">Prototyping</span>
+                            <span class="skill-tag bg-pink-100 text-pink-800">User Research</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">Seeking developers to collaborate on a mental health app design.</p>
+                    </div>
+                    <div class="flex-shrink-0 flex items-center">
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg">
+                            Connect
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Empty State (hidden by default) -->
+                <div id="emptyState" class="hidden text-center py-12">
+                    <i class="fas fa-users text-5xl text-gray-300 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">No results found</h3>
+                    <p class="text-gray-600 max-w-md mx-auto">Try adjusting your search filters or create a profile to be the first in your area.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
